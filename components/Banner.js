@@ -3,9 +3,13 @@ function Banner() {
     return (
         <div className="relative h-[300px] sm:h-[400px]  lg:h-[500px] xl:h-[600px] 2xl:h-[700px]">
             <Image src="https://links.papareact.com/0fm" layout="fill" objectFit="cover" />
-            <p>Not sure where to go? Perfec ewrt</p>
-            <div className="p-5 bg-red-500 rounded-full z-50">
-              <p className=''>Check Me Out</p>
+
+            <div className="absolute top-1/2 w-full text-center">
+                <p className="text-sm sm:text-lg">Not sure where to go? Perfect.</p>
+                <button className='text-purple-500 bg-white px-10 py-4 shadow-md rounded-lg font-bold 
+                my-3 cursor-pointer hover:shadow-xl active:scale-90 transition duration-150'>
+                    Check Me Out
+                </button>
             </div>
         </div>
     )
