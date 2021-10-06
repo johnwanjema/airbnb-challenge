@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { GlobeAltIcon, MenuIcon, SearchIcon, UserCircleIcon } from '@heroicons/react/outline';
+import { GlobeAltIcon, MenuIcon, SearchIcon, UserCircleIcon } from '@heroicons/react/solid';
 
 function Header() {
     return (
