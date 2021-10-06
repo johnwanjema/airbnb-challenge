@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import MediumCard from '../components/MediumCard'
 import SmallCard from '../components/SmallCard'
 import LargeCard from '../components/LargeCard'
+import Footer from '../components/Footer'
 
 export default function Home({ exploreData, cardsData }) {
   return (
@@ -33,15 +34,14 @@ export default function Home({ exploreData, cardsData }) {
             ))}
           </div>
         </section>
-        <section>
-          <LargeCard
-            img='https://links.papareact.com/4cj'
-            title='The greatest outdoors'
-            description='Wishlist created by airbnb'
-            buttonText='check me out'
-          />
-        </section>
+        <LargeCard
+          img='https://links.papareact.com/4cj'
+          title='The greatest outdoors'
+          description='Wishlist created by airbnb'
+          buttonText='check me out'
+        />
       </main>
+      <Footer/>
     </div>
   )
 }
