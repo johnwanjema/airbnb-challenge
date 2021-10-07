@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import { GlobeAltIcon, MenuIcon, SearchIcon, UserCircleIcon } from '@heroicons/react/solid';
+import { useState } from 'react';
 
 function Header() {
+    const [searchInput,setSearchInput] = useState('');
     return (
         <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
             {/* left */}
@@ -11,7 +13,7 @@ function Header() {
 
             {/* centre */}
             <div className="flex items-center rounded-full md:border-2 md:shadow-md">
-                <input className="flex-grow pl-4 bg-transparent outline-none text-gray-600 placeholder-gray-400" type="text" placeholder="start your search" />
+                <input value={searchInput} onChange={(e)=> setSearchInput(e.target.value)}  className="flex-grow pl-4 bg-transparent outline-none text-gray-600 placeholder-gray-400" type="text" placeholder="start your search" />
                 <SearchIcon className="hidden md:inline-flex h-8 bg-red-500 text-white rounded-full p-2 cursor-pointer" />
             </div>
 
