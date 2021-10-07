@@ -9,11 +9,15 @@ function Header() {
     const [searchInput, setSearchInput] = useState('');
     const [startDate, setStartDate] = useState(new Date);
     const [endDate, setEndDate] = useState(new Date);
-   const  selectionRange ={
-       startDate:startDate,
-       endDate:endDate,
-       key:'Selection'
-   }
+    const selectionRange = {
+        startDate: startDate,
+        endDate: endDate,
+        key: 'selection'
+    }
+    const handleSelect = (ranges) => {
+        setStartDate(ranges.selection.startDate);
+        setEndDate(ranges.selection.endDate);
+    }
     return (
         <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
             {/* left */}
@@ -37,8 +41,11 @@ function Header() {
                 </div>
             </div>
             {searchInput &&
-                <div>
-                    <DateRangePicker ranges={[selectionRange]}/>
+                <div className="flex flex-col col-span-3 mx-auto mt-5">
+                    <DateRangePicker ranges={[selectionRange]} minDate={new Date}
+                        rangeColors={["#FDSB61"]}
+                        onChange={handleSelect}
+                    />
                 </div>
             }
         </header>
