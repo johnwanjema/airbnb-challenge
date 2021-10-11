@@ -41,7 +41,7 @@ export default function Home({ exploreData, cardsData }) {
           buttonText='check me out'
         />
       </main>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
