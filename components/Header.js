@@ -19,7 +19,7 @@ function Header({placeholder}) {
         key: 'selection'
     }
     const handleSelect = (ranges) => {
-        console.log(ranges.selection.startDate)
+        // console.log(ranges.selection.startDate)
         setStartDate(ranges.selection.startDate);
         setEndDate(ranges.selection.endDate);
     }
