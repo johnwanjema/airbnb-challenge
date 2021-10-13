@@ -12,7 +12,6 @@ function Search({ searchResults }) {
     const formattedStartDate = format(new Date(startDate), "dd MMM yy");
     const formattedEndDate = format(new Date(endDate), "dd MMM yy");
     const range = `${formattedStartDate} - ${formattedEndDate}`
-    console.log(searchResults)
     return (
         <div>
             <Header placeholder={`${location} | ${range} | ${numberOfGuests} guests`} />
@@ -44,7 +43,7 @@ function Search({ searchResults }) {
                     </div>
                 </section>
                 <section className="hidden xl:inline-flex xl:min-w-[600px]">
-                    <Map />
+                    <Map searchResults={searchResults} />
                 </section>
             </main>
             <Footer />
